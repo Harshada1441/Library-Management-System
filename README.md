@@ -339,43 +339,61 @@ The project can be further enhanced with:
 
 
 ## 📸 Screenshots
-
-Example:
+## 📸 Application Screenshots
 
 ### 🔐 Admin Login
 
+Secure admin login page for accessing the Library Management System.
 
-![Admin Login](screenshots/login.png)
+![Admin Login](screenshots/01-login.png)
 
+---
 
 ### 📊 Dashboard
 
+The dashboard provides an overview of total books, available books, issued books, students, and overdue books.
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/02-dashboard.png)
 
+---
 
-### 📚 Books Management
+### 📚 Book Management
 
+Manage library books with options to add, search, edit, and delete books.
 
-![Books Management](screenshots/books.png)
+![Book Management](screenshots/03-books.png)
 
+---
 
 ### 👨‍🎓 Student Management
 
+Register and manage student information including name, email, phone, and course.
 
-![Student Management](screenshots/students.png)
+![Student Management](screenshots/04-students.png)
 
+---
 
 ### 📤 Issue Book
 
+Issue available books to registered students and set due dates.
 
-![Issue Book](screenshots/issue-book.png)
+![Issue Book](screenshots/05-issue-book.png)
 
+---
 
-### 📜 Transaction History
+### 📥 Issued Books
 
+View currently issued books and manage book returns.
 
-![Transaction History](screenshots/history.png)
+![Issued Books](screenshots/06-issued-books.png)
+
+---
+
+### 📜 Issue & Return History
+
+View complete transaction history including issue date, due date, return date, and status.
+
+![Issue and Return History](screenshots/07-history.png)
 
 
 ## 👩‍💻 Author
