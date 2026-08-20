@@ -341,61 +341,61 @@ The project can be further enhanced with:
 ## 📸 Screenshots
 ## 📸 Application Screenshots
 
-### 🔐 Admin Login
+## 🔐 Admin Login
 
-Secure admin login page for accessing the Library Management System.
+The admin login page provides secure access to the Library Management System.
 
 ![Admin Login](screenshots/01-login.png)
 
 ---
 
-### 📊 Dashboard
+## 📊 Dashboard
 
-The dashboard provides an overview of total books, available books, issued books, students, and overdue books.
+The dashboard provides an overview of total books, available books, issued books, registered students, and overdue books.
 
 ![Dashboard](screenshots/02-dashboard.png)
 
 ---
 
-### 📚 Book Management
+## 📚 Book Management
 
-Manage library books with options to add, search, edit, and delete books.
+The Book Management module allows administrators to add, search, update, and delete library books.
 
 ![Book Management](screenshots/03-books.png)
 
 ---
 
-### 👨‍🎓 Student Management
+## 👨‍🎓 Student Management
 
-Register and manage student information including name, email, phone, and course.
+The Student Management module allows administrators to register, search, update, and manage student records.
 
 ![Student Management](screenshots/04-students.png)
 
 ---
 
-### 📤 Issue Book
+## 📤 Issue Book
 
-Issue available books to registered students and set due dates.
+The Issue Book module allows administrators to issue available books to registered students and assign due dates.
 
 ![Issue Book](screenshots/05-issue-book.png)
 
 ---
 
-### 📥 Issued Books
+## 📥 Issued Books
 
-View currently issued books and manage book returns.
+The Issued Books page displays currently issued books and provides an option to return books.
 
 ![Issued Books](screenshots/06-issued-books.png)
 
 ---
 
-### 📜 Issue & Return History
+## 📜 Issue & Return History
 
-View complete transaction history including issue date, due date, return date, and status.
+The History page maintains complete records of book issue and return transactions, including issue date, due date, return date, and status.
 
-![Issue and Return History](screenshots/07-history.png)
-<img width="1893" height="920" alt="history and return" src="https://github.com/user-attachments/assets/f99dfe4d-672b-46f2-b662-b5cc1d0bc144" />
+![Issue & Return History](screenshots/07-history.png)
 
+---
 
 
 ## 👩‍💻 Author
