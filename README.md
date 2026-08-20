@@ -131,3 +131,266 @@ Stores administrator authentication information.
 id
 username
 password
+
+
+
+Students
+## Stores registered student information.
+id
+name
+email
+phone
+course
+
+
+Books
+## Stores library book information.
+id
+title
+author
+category
+quantity
+available_quantity
+
+
+Issue Records
+## Stores book issue and return transactions.
+id
+student_id
+book_id
+issue_date
+due_date
+return_date
+status
+
+
+## Database Relationships
+                 ┌──────────────┐
+                 │    Users     │
+                 └──────────────┘
+                        │
+                        │ Authentication
+                        │
+                 ┌──────────────┐
+                 │    Admin     │
+                 └──────────────┘
+
+
+
+
+┌──────────────┐                 ┌──────────────┐
+│   Students   │                 │    Books     │
+└──────┬───────┘                 └──────┬───────┘
+       │                                │
+       │                                │
+       └──────────┐        ┌────────────┘
+                  ▼        ▼
+             ┌──────────────────┐
+             │  Issue Records   │
+             └──────────────────┘
+
+
+## 📁 Project Structure
+Library-Management-System/
+│
+├── app.py
+├── .gitignore
+├── README.md
+│
+├── static/
+│   └── style.css
+│
+└── templates/
+    │
+    ├── base.html
+    ├── login.html
+    ├── dashboard.html
+    │
+    ├── books.html
+    ├── add_book.html
+    ├── edit_book.html
+    │
+    ├── students.html
+    ├── add_student.html
+    ├── edit_student.html
+    │
+    ├── issue_book.html
+    ├── issued_books.html
+    └── history.html
+
+## ⚙️ Installation & Setup
+1. Clone the Repository
+git clone https://github.com/Harshada1441/Library-Management-System.git
+2. Navigate to the Project
+cd Library-Management-System
+3. Create a Virtual Environment
+python -m venv venv
+4. Activate Virtual Environment
+Windows
+venv\Scripts\activate
+macOS / Linux
+source venv/bin/activate
+5. Install Flask
+pip install flask
+6. Run the Application
+python app.py
+7. Open in Browser
+http://127.0.0.1:5000
+
+
+## 🔐 Demo Credentials
+For demonstration purposes:
+Username: admin
+Password: admin123
+For a production application, passwords should be securely hashed and sensitive credentials should not be stored directly in source code.
+
+## 🔄 Application Workflow
+                 ┌───────────────┐
+                 │  Admin Login  │
+                 └───────┬───────┘
+                         │
+                         ▼
+                 ┌───────────────┐
+                 │   Dashboard   │
+                 └───────┬───────┘
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+          ▼              ▼              ▼
+     ┌─────────┐   ┌───────────┐  ┌────────────┐
+     │  Books  │   │ Students  │  │ Issue Book │
+     └────┬────┘   └───────────┘  └─────┬──────┘
+          │                              │
+          │                              ▼
+          │                       ┌─────────────┐
+          │                       │Issued Books │
+          │                       └──────┬──────┘
+          │                              │
+          │                              ▼
+          │                       ┌─────────────┐
+          │                       │Return Book  │
+          │                       └──────┬──────┘
+          │                              │
+          └──────────────┬───────────────┘
+                         ▼
+                 ┌───────────────┐
+                 │    History    │
+                 └───────────────┘
+
+
+
+##🎯 Core Concepts Demonstrated
+
+This project demonstrates practical implementation of:
+
+Python programming
+Flask web development
+CRUD operations
+SQLite database management
+SQL queries
+Database relationships
+Authentication
+Session management
+Jinja2 templating
+HTML forms
+Input validation
+Search functionality
+Issue/return transactions
+Date validation
+Overdue detection
+Responsive web design
+Git and GitHub
+
+
+## 💡 What I Learned
+
+Through this project, I gained practical experience in building a complete web application from scratch, including:
+
+Designing a relational database
+Connecting Flask with SQLite
+Implementing CRUD functionality
+Managing user sessions
+Creating reusable Jinja2 templates
+Handling form submissions
+Implementing business logic for book issuing and returning
+Managing book availability
+Building a responsive dashboard
+Using Git for version control
+Publishing a project on GitHub
+
+
+##🔮 Future Enhancements
+
+The project can be further enhanced with:
+
+📧 Email notifications for overdue books
+💰 Automatic fine calculation
+📊 Advanced dashboard charts
+📄 PDF report generation
+📑 CSV export
+🔎 Advanced filtering and sorting
+👨‍🎓 Student login portal
+🔑 Password hashing
+👤 Admin profile management
+📱 Improved mobile application support
+☁️ Cloud database integration
+🌐 Deployment on a cloud platform
+🔔 Automated due-date reminders
+
+
+## 📸 Screenshots
+
+Example:
+
+### 🔐 Admin Login
+
+
+![Admin Login](screenshots/login.png)
+
+
+### 📊 Dashboard
+
+
+![Dashboard](screenshots/dashboard.png)
+
+
+### 📚 Books Management
+
+
+![Books Management](screenshots/books.png)
+
+
+### 👨‍🎓 Student Management
+
+
+![Student Management](screenshots/students.png)
+
+
+### 📤 Issue Book
+
+
+![Issue Book](screenshots/issue-book.png)
+
+
+### 📜 Transaction History
+
+
+![Transaction History](screenshots/history.png)
+
+
+## 👩‍💻 Author
+Harshada Patil
+
+Computer Engineering Graduate | Aspiring Data Scientist | Python Developer
+
+GitHub:
+https://github.com/Harshada1441
+
+
+## ⭐ Support
+If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
+
+
+##📌 Project Status
+Status: Completed ✅
+This project was developed as a college-level mini project to demonstrate practical skills in Python, Flask, SQLite, Web Development, Database Management, and Git/GitHub.
