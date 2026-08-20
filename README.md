@@ -161,31 +161,26 @@ return_date
 status
 
 ## 🔗 Database Relationships
-                 ┌──────────────┐
-                 │    Users     │
-                 └──────┬───────┘
+
+```text
+Users
+  │
+  │ Authentication
+  ▼
+Admin
+
+Students ───────────────┐
                         │
-                        │ Authentication
                         ▼
-                 ┌──────────────┐
-                 │    Admin     │
-                 └──────────────┘
+                 Issue Records
+                        ▲
+                        │
+Books ─────────────────┘
 
-
-
-
-┌──────────────┐                 ┌──────────────┐
-│   Students   │                 │    Books     │
-└──────┬───────┘                 └──────┬───────┘
-       │                                │
-       └──────────┐        ┌────────────┘
-                  ▼        ▼
-             ┌──────────────────┐
-             │  Issue Records   │
-             └──────────────────┘
-
+```
 
 ## 📁 Project Structure
+```text
 Library-Management-System/
 │
 ├── app.py
@@ -217,7 +212,7 @@ Library-Management-System/
     ├── issue_book.html
     ├── issued_books.html
     └── history.html
-
+```
 ## ⚙️ Installation & Setup
 1. Clone the Repository
 git clone https://github.com/Harshada1441/Library-Management-System.git
