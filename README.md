@@ -392,7 +392,7 @@ The Issued Books page displays currently issued books and provides an option to 
 ## 📜 Issue & Return History
 
 The History page maintains complete records of book issue and return transactions, including issue date, due date, return date, and status.
-
+ 
 ![Issue & Return History](screenshots/07-history.png)
 
 ---
