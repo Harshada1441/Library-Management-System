@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Book | Library Management System
+{% endblock %}
+
+{% block page_heading %}
+Add New Book
+{% endblock %}
+
+{% block content %}
+
+<div class="welcome">
+
+    <h1>➕ Add New Book</h1>
+
+    <p>
+        Add a new book to the college library.
+    </p>
+
+</div>
+
+
+<div class="form-card">
+
+    <form method="POST">
+
+
+        <!-- Book Title -->
+
+        <div class="form-group">
+
+            <label>
+                Book Title
+            </label>
+
+            <input
+                type="text"
+                name="title"
+                placeholder="Enter book title"
+                required>
+
+        </div>
+
+
+        <!-- Author -->
+
+        <div class="form-group">
+
+            <label>
+                Author
+            </label>
+
+            <input
+                type="text"
+                name="author"
+                placeholder="Enter author name"
+                required>
+
+        </div>
+
+
+        <!-- Category -->
+
+        <div class="form-group">
+
+            <label>
+                Category
+            </label>
+
+            <input
+                type="text"
+                name="category"
+                placeholder="e.g. Programming, Database">
+
+        </div>
+
+
+        <!-- Quantity -->
+
+        <div class="form-group">
+
+            <label>
+                Quantity
+            </label>
+
+            <input
+                type="number"
+                name="quantity"
+                min="1"
+                placeholder="Enter quantity"
+                required>
+
+        </div>
+
+
+        <!-- Buttons -->
+
+        <button
+            type="submit"
+            class="btn">
+
+            ➕ Add Book
+
+        </button>
+
+
+        <a
+            href="{{ url_for('books') }}"
+            class="btn secondary">
+
+            Cancel
+
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Book | Library Management System
+{% endblock %}
+
+{% block page_heading %}
+Edit Book
+{% endblock %}
+
+{% block content %}
+
+<div class="welcome">
+
+    <h1>✏️ Edit Book</h1>
+
+    <p>
+        Update the selected book information.
+    </p>
+
+</div>
+
+
+<div class="form-card">
+
+    <form method="POST">
+
+
+        <!-- Book Title -->
+
+        <div class="form-group">
+
+            <label>
+                Book Title
+            </label>
+
+            <input
+                type="text"
+                name="title"
+                value="{{ book['title'] }}"
+                required>
+
+        </div>
+
+
+        <!-- Author -->
+
+        <div class="form-group">
+
+            <label>
+                Author
+            </label>
+
+            <input
+                type="text"
+                name="author"
+                value="{{ book['author'] }}"
+                required>
+
+        </div>
+
+
+        <!-- Category -->
+
+        <div class="form-group">
+
+            <label>
+                Category
+            </label>
+
+            <input
+                type="text"
+                name="category"
+                value="{{ book['category'] or '' }}">
+
+        </div>
+
+
+        <!-- Quantity -->
+
+        <div class="form-group">
+
+            <label>
+                Quantity
+            </label>
+
+            <input
+                type="number"
+                name="quantity"
+                value="{{ book['quantity'] }}"
+                min="1"
+                required>
+
+        </div>
+
+
+        <!-- Buttons -->
+
+        <button
+            type="submit"
+            class="btn">
+
+            💾 Update Book
+
+        </button>
+
+
+        <a
+            href="{{ url_for('books') }}"
+            class="btn secondary">
+
+            Cancel
+
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}

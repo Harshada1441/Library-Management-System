@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard | Library Management System
+{% endblock %}
+
+{% block page_heading %}
+Library Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="welcome">
+
+    <h1>
+        Welcome, {{ username }} 👋
+    </h1>
+
+    <p>
+        Manage your college library from one place.
+    </p>
+
+</div>
+
+
+<!-- =========================
+     STATISTICS CARDS
+========================== -->
+
+<div class="cards">
+
+
+    <!-- Total Books -->
+
+    <div class="card books">
+
+        <div class="card-icon">
+            📚
+        </div>
+
+        <div>
+
+            <h3>
+                Total Books
+            </h3>
+
+            <h2>
+                {{ total_books }}
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- Available Books -->
+
+    <div class="card available">
+
+        <div class="card-icon">
+            📗
+        </div>
+
+        <div>
+
+            <h3>
+                Available Books
+            </h3>
+
+            <h2>
+                {{ available_books }}
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- Issued Books -->
+
+    <div class="card issued">
+
+        <div class="card-icon">
+            📕
+        </div>
+
+        <div>
+
+            <h3>
+                Issued Books
+            </h3>
+
+            <h2>
+                {{ issued_books }}
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- Total Students -->
+
+    <div class="card students">
+
+        <div class="card-icon">
+            👨‍🎓
+        </div>
+
+        <div>
+
+            <h3>
+                Total Students
+            </h3>
+
+            <h2>
+                {{ total_students }}
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- Overdue Books -->
+
+    <div class="card overdue">
+
+        <div class="card-icon">
+            ⚠️
+        </div>
+
+        <div>
+
+            <h3>
+                Overdue Books
+            </h3>
+
+            <h2>
+                {{ overdue_books }}
+            </h2>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     QUICK ACTIONS
+========================== -->
+
+<section class="quick-actions">
+
+    <div class="section-header">
+
+        <h2>
+            Quick Actions
+        </h2>
+
+        <p>
+            Manage your library easily.
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-actions">
+
+
+        <!-- Books -->
+
+        <a href="{{ url_for('books') }}"
+           class="action-card">
+
+            <span class="action-icon">
+                📚
+            </span>
+
+            <span>
+
+                <strong>
+                    Manage Books
+                </strong>
+
+                <small>
+                    Add, edit, delete & search books
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- Students -->
+
+        <a href="{{ url_for('students') }}"
+           class="action-card">
+
+            <span class="action-icon">
+                👨‍🎓
+            </span>
+
+            <span>
+
+                <strong>
+                    Manage Students
+                </strong>
+
+                <small>
+                    Register and manage students
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- Issue Book -->
+
+        <a href="{{ url_for('issue_book') }}"
+           class="action-card">
+
+            <span class="action-icon">
+                📤
+            </span>
+
+            <span>
+
+                <strong>
+                    Issue Book
+                </strong>
+
+                <small>
+                    Issue a book to a student
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- Issued Books -->
+
+        <a href="{{ url_for('issued_books') }}"
+           class="action-card">
+
+            <span class="action-icon">
+                📥
+            </span>
+
+            <span>
+
+                <strong>
+                    Issued Books
+                </strong>
+
+                <small>
+                    View and return issued books
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- History -->
+
+        <a href="{{ url_for('history') }}"
+           class="action-card">
+
+            <span class="action-icon">
+                📜
+            </span>
+
+            <span>
+
+                <strong>
+                    Issue History
+                </strong>
+
+                <small>
+                    View complete transaction history
+                </small>
+
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+{% endblock %}

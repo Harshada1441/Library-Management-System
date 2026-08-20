@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Admin Login | Library Management System
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body class="login-page">
+
+
+    <!-- =========================
+         LOGIN CONTAINER
+    ========================== -->
+
+    <div class="login-container">
+
+
+        <!-- Logo -->
+
+        <div class="login-logo">
+
+            <div class="login-icon">
+                📚
+            </div>
+
+            <h1>
+                Library Management
+            </h1>
+
+            <p>
+                College Library Management System
+            </p>
+
+        </div>
+
+
+        <!-- Login Card -->
+
+        <div class="login-card">
+
+
+            <div class="login-header">
+
+                <h2>
+                    Admin Login
+                </h2>
+
+                <p>
+                    Sign in to manage the library
+                </p>
+
+            </div>
+
+
+            <!-- Error Message -->
+
+            {% if error %}
+
+            <div class="login-error">
+
+                ⚠️
+
+                <span>
+                    {{ error }}
+                </span>
+
+            </div>
+
+            {% endif %}
+
+
+            <!-- Login Form -->
+
+            <form method="POST">
+
+
+                <!-- Username -->
+
+                <div class="login-form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="login-form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required>
+
+                </div>
+
+
+                <!-- Login Button -->
+
+                <button
+                    type="submit"
+                    class="login-btn">
+
+                    🔐 Login
+
+                </button>
+
+            </form>
+
+
+            <!-- Demo Credentials -->
+
+            <div class="login-info">
+
+                <strong>
+                    Demo Admin Account
+                </strong>
+
+                <p>
+                    Username: <b>admin</b>
+                </p>
+
+                <p>
+                    Password: <b>admin123</b>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+
+        <div class="login-footer">
+
+            © 2026 Library Management System
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

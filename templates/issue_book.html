@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}
+Issue Book | Library Management System
+{% endblock %}
+
+{% block page_heading %}
+Issue Book
+{% endblock %}
+
+{% block content %}
+
+<div class="welcome">
+
+    <h1>📤 Issue Book</h1>
+
+    <p>
+        Issue a library book to a registered student.
+    </p>
+
+</div>
+
+
+<div class="form-card">
+
+    <form method="POST">
+
+
+        <!-- Student -->
+
+        <div class="form-group">
+
+            <label>
+                Select Student
+            </label>
+
+            <select name="student_id" required>
+
+                <option value="">
+                    -- Select Student --
+                </option>
+
+                {% for student in students %}
+
+                <option value="{{ student['id'] }}">
+
+                    {{ student['name'] }}
+                    -
+                    {{ student['course'] }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+
+        <!-- Book -->
+
+        <div class="form-group">
+
+            <label>
+                Select Book
+            </label>
+
+            <select name="book_id" required>
+
+                <option value="">
+                    -- Select Book --
+                </option>
+
+                {% for book in books %}
+
+                <option value="{{ book['id'] }}">
+
+                    {{ book['title'] }}
+                    -
+                    Available: {{ book['available_quantity'] }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+
+        <!-- Due Date -->
+
+        <div class="form-group">
+
+            <label>
+                Due Date
+            </label>
+
+            <input
+                type="date"
+                name="due_date"
+                min="{{ today }}"
+                required>
+
+        </div>
+
+
+        <!-- Submit -->
+
+        <button
+            type="submit"
+            class="btn">
+
+            📤 Issue Book
+
+        </button>
+
+
+        <a
+            href="{{ url_for('issued_books') }}"
+            class="btn secondary">
+
+            View Issued Books
+
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}

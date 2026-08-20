@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Library Management System
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                📚
+            </div>
+
+            <div>
+
+                <h2>
+                    Library
+                </h2>
+
+                <span>
+                    Management System
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MAIN MENU
+            </p>
+
+
+            <a href="{{ url_for('dashboard') }}"
+               class="sidebar-link">
+
+                <span>🏠</span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="{{ url_for('books') }}"
+               class="sidebar-link">
+
+                <span>📚</span>
+
+                <span>
+                    Books
+                </span>
+
+            </a>
+
+
+            <a href="{{ url_for('students') }}"
+               class="sidebar-link">
+
+                <span>👨‍🎓</span>
+
+                <span>
+                    Students
+                </span>
+
+            </a>
+
+
+            <p class="nav-title">
+                TRANSACTIONS
+            </p>
+
+
+            <a href="{{ url_for('issue_book') }}"
+               class="sidebar-link">
+
+                <span>📤</span>
+
+                <span>
+                    Issue Book
+                </span>
+
+            </a>
+
+
+            <a href="{{ url_for('issued_books') }}"
+               class="sidebar-link">
+
+                <span>📥</span>
+
+                <span>
+                    Issued Books
+                </span>
+
+            </a>
+
+
+            <a href="{{ url_for('history') }}"
+               class="sidebar-link">
+
+                <span>📜</span>
+
+                <span>
+                    History
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div class="user-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <strong>
+                        {{ session.get('username', 'Admin') }}
+                    </strong>
+
+                    <small>
+                        Administrator
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <a href="{{ url_for('logout') }}"
+               class="sidebar-logout">
+
+                🚪 Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN AREA
+    ========================== -->
+
+    <main class="main-content">
+
+        <!-- Top Header -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>
+                    {% block page_heading %}
+                    Library Dashboard
+                    {% endblock %}
+                </h1>
+
+                <p>
+                    College Library Management System
+                </p>
+
+            </div>
+
+
+            <div class="header-user">
+
+                👤 {{ session.get('username', 'Admin') }}
+
+            </div>
+
+        </header>
+
+
+        <!-- Page Content -->
+
+        <div class="page-content">
+
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}
+Issued Books | Library Management System
+{% endblock %}
+
+{% block page_heading %}
+Issued Books
+{% endblock %}
+
+{% block content %}
+
+<div class="welcome">
+
+    <h1>📥 Issued Books</h1>
+
+    <p>
+        View issued books and manage book returns.
+    </p>
+
+</div>
+
+
+<!-- =========================
+     ACTION BUTTON
+========================== -->
+
+<div style="margin-bottom: 20px;">
+
+    <a
+        href="{{ url_for('issue_book') }}"
+        class="btn">
+
+        ➕ Issue New Book
+
+    </a>
+
+</div>
+
+
+<!-- =========================
+     ISSUED BOOKS TABLE
+========================== -->
+
+<div class="table-container">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Student</th>
+                <th>Book</th>
+                <th>Issue Date</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            {% for record in records %}
+
+            <tr>
+
+                <td>
+                    {{ record["id"] }}
+                </td>
+
+                <td>
+                    {{ record["student_name"] }}
+                </td>
+
+                <td>
+                    {{ record["book_title"] }}
+                </td>
+
+                <td>
+                    {{ record["issue_date"] }}
+                </td>
+
+                <td>
+                    {{ record["due_date"] }}
+                </td>
+
+                <td>
+
+                    {% if record["status"] == "Issued" %}
+
+                        {% if record["due_date"] < today %}
+
+                            <span class="status-overdue">
+                                Overdue
+                            </span>
+
+                        {% else %}
+
+                            <span class="status-issued">
+                                Issued
+                            </span>
+
+                        {% endif %}
+
+                    {% else %}
+
+                        <span class="status-returned">
+                            Returned
+                        </span>
+
+                    {% endif %}
+
+                </td>
+
+                <td>
+
+                    {% if record["status"] == "Issued" %}
+
+                        <a
+                            href="{{ url_for('return_book', record_id=record['id']) }}"
+                            class="return-btn"
+                            onclick="return confirm('Are you sure you want to return this book?')">
+
+                            📥 Return
+
+                        </a>
+
+                    {% else %}
+
+                        <span class="status-returned">
+                            Returned
+                        </span>
+
+                    {% endif %}
+
+                </td>
+
+            </tr>
+
+            {% else %}
+
+            <tr>
+
+                <td
+                    colspan="7"
+                    style="text-align: center;">
+
+                    No issued books found.
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}
