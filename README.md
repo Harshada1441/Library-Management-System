@@ -394,6 +394,8 @@ View currently issued books and manage book returns.
 View complete transaction history including issue date, due date, return date, and status.
 
 ![Issue and Return History](screenshots/07-history.png)
+<img width="1893" height="920" alt="history and return" src="https://github.com/user-attachments/assets/f99dfe4d-672b-46f2-b662-b5cc1d0bc144" />
+
 
 
 ## 👩‍💻 Author
