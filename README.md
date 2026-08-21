@@ -318,7 +318,9 @@ View currently issued books and manage book returns.
 
 View complete issue and return transaction history.
 
-🎯 Core Concepts Demonstrated
+
+
+## 🎯 Core Concepts Demonstrated
 
 This project demonstrates practical implementation of:
 
@@ -339,7 +341,8 @@ Date Validation
 Overdue Detection
 Responsive Web Design
 Git & GitHub
-💡 Learning Outcomes
+
+### 💡 Learning Outcomes
 
 Through this project, I gained practical experience in:
 
@@ -354,9 +357,11 @@ Managing book availability
 Building responsive dashboards
 Using Git for version control
 Publishing projects on GitHub
-🔮 Future Enhancements
 
-Planned improvements include:
+
+
+🔮 Future Enhancements
+## Planned improvements include:
 
 📧 Email notifications for overdue books
 💰 Automatic fine calculation
