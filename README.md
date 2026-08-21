@@ -292,6 +292,7 @@ The following screenshots demonstrate the main modules of the application.
 🔐 Admin Login
 
 Secure admin login page for accessing the Library Management System.
+[Admin Login](screenshots/01-login.png)
 
 
 📊 Dashboard
