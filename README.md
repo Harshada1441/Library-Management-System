@@ -152,8 +152,9 @@ Stores administrator authentication information.
 id
 username
 password
-Students
 
+
+## Students
 Stores registered student information.
 
 id
@@ -161,8 +162,8 @@ name
 email
 phone
 course
-Books
 
+## Books
 Stores library book information.
 
 id
@@ -171,10 +172,10 @@ author
 category
 quantity
 available_quantity
-Issue Records
 
+
+## Issue Records
 Stores book issue and return transactions.
-
 id
 student_id
 book_id
@@ -182,7 +183,9 @@ issue_date
 due_date
 return_date
 status
-Database Relationship
+
+## Database Relationship
+```text
 Students ────────────┐
                      │
                      ▼
@@ -190,7 +193,11 @@ Students ────────────┐
                      ▲
                      │
 Books ───────────────┘
-📁 Project Structure
+```
+
+## 📁 Project Structure
+
+```text
 Library-Management-System/
 │
 ├── app.py
@@ -222,6 +229,8 @@ Library-Management-System/
     ├── issue_book.html
     ├── issued_books.html
     └── history.html
+```
+
 ⚙️ Installation & Setup
 1. Clone the Repository
 git clone https://github.com/Harshada1441/Library-Management-System.git
@@ -232,28 +241,26 @@ python -m venv venv
 4. Activate Virtual Environment
 
 Windows
-
 venv\Scripts\activate
 
 macOS / Linux
-
 source venv/bin/activate
+
 5. Install Flask
 pip install flask
 6. Run the Application
 python app.py
 7. Open in Browser
 http://127.0.0.1:5000
+
 🔐 Demo Credentials
-
 For demonstration purposes:
-
 Username: admin
 Password: admin123
-
 For production applications, passwords should be securely hashed and sensitive credentials should not be stored directly in source code.
 
 🔄 Application Workflow
+```
 Admin Login
      │
      ▼
@@ -275,7 +282,7 @@ Admin Login
                           │
                           ▼
                        History
-
+```
                        
 📸 Application Screenshots
 
