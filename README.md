@@ -284,41 +284,64 @@ Admin Login
                        History
 ```
                        
-📸 Application Screenshots
+
+## 📸 Application Screenshots
 
 The following screenshots demonstrate the main modules of the application.
 
-
-🔐 Admin Login
+### 🔐 Admin Login
 
 Secure admin login page for accessing the Library Management System.
+
 ![Admin Login](screenshots/01-login.png)
 
+---
 
-📊 Dashboard
+### 📊 Dashboard
 
 The dashboard provides an overview of books, students, issued books, available books, and overdue books.
 
-📚 Book Management
+![Dashboard](screenshots/02-dashboard.png)
+
+---
+
+### 📚 Book Management
 
 Manage library books by adding, searching, editing, and deleting records.
 
-👨‍🎓 Student Management
+![Book Management](screenshots/03-books.png)
+
+---
+
+### 👨‍🎓 Student Management
 
 Manage registered student records including student information and course details.
 
-📤 Issue Book
+![Student Management](screenshots/04-students.png)
+
+---
+
+### 📤 Issue Book
 
 Issue available books to registered students and assign due dates.
 
-📥 Issued Books
+![Issue Book](screenshots/05-issue-book.png)
+
+---
+
+### 📥 Issued Books
 
 View currently issued books and manage book returns.
 
-📜 Issue & Return History
+![Issued Books](screenshots/06-issued-books.png)
 
-View complete issue and return transaction history.
+---
 
+### 📜 Issue & Return History
+
+View complete transaction history including issue date, due date, return date, and transaction status.
+
+![Issue & Return History](screenshots/07-history.png)
 
 
 ## 🎯 Core Concepts Demonstrated
