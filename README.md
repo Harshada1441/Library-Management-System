@@ -1,71 +1,98 @@
 # 📚 Library Management System
 
-A professional web-based **Library Management System** built using **Python Flask and SQLite** to manage college library operations.
+A full-stack web-based **Library Management System** built with **Python, Flask, SQLite, HTML5, and CSS3** for managing college library operations digitally.
 
-The system allows administrators to manage books, students, book issuing, returns, due dates, overdue books, and transaction history.
+The application provides a centralized platform for administrators to manage books, students, book issue and return transactions, due dates, overdue books, and transaction history through a clean and responsive dashboard.
 
 ---
 
-## ✨ Key Features
+## 🚀 Project Overview
+
+Traditional library management often involves manual records and repetitive data entry.
+
+This project provides a simple digital solution that allows administrators to:
+
+- Manage library books
+- Manage student records
+- Issue books
+- Return books
+- Track due dates
+- Detect overdue books
+- Maintain transaction history
+- Monitor library statistics from a dashboard
+
+The project was developed as a **college-level mini project** to demonstrate practical knowledge of Python backend development, database management, CRUD operations, authentication, and web development.
+
+---
+
+## ✨ Features
 
 ### 🔐 Admin Authentication
 
-- Secure admin login
+- Admin login
 - Session-based authentication
-- Protected dashboard
+- Protected dashboard and management pages
 - Logout functionality
+- Invalid login handling
 
 ### 📚 Book Management
 
-- Add books
-- View books
+- Add new books
+- View all books
 - Search books
-- Update books
+- Edit book details
 - Delete books
-- Track total and available quantities
+- Track total quantity
+- Track available quantity
+- Prevent issuing unavailable books
 
 ### 👨‍🎓 Student Management
 
 - Register students
-- View students
+- View student records
 - Search students
-- Update student information
-- Delete students
+- Edit student information
+- Delete student records
+- Store name, email, phone, and course
 
-### 📤 Book Issue
+### 📤 Book Issue Management
 
-- Issue books to students
+- Issue books to registered students
 - Select available books
 - Set due dates
-- Record issue date
-- Update book availability
+- Automatically record issue date
+- Update available book quantity
+- Prevent unavailable books from being issued
 
-### 📥 Book Return
+### 📥 Book Return Management
 
 - Return issued books
-- Record return date
+- Automatically record return date
 - Update transaction status
-- Update book availability
+- Increase available book quantity
+- Maintain complete transaction records
 
-### ⚠️ Overdue Tracking
+### ⚠️ Due Date & Overdue Tracking
 
 - Track due dates
 - Detect overdue books
 - Display overdue status
-- Show overdue count on dashboard
+- Show overdue book count
+- Prevent invalid due dates
 
 ### 📜 Transaction History
 
-- View issue history
-- View return history
+- View complete issue and return history
 - Student details
 - Book details
 - Issue date
 - Due date
 - Return date
-- Status
+- Transaction status
 
 ### 📊 Dashboard
+
+The dashboard provides quick statistics for:
 
 - 📚 Total Books
 - 📗 Available Books
@@ -75,30 +102,41 @@ The system allows administrators to manage books, students, book issuing, return
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 | Technology | Purpose |
-|---|---|
-| Python | Backend |
-| Flask | Web Framework |
-| SQLite | Database |
-| HTML5 | Frontend |
-| CSS3 | Styling |
-| Jinja2 | Templates |
+| Python | Backend Programming |
+| Flask | Web Application Framework |
+| SQLite | Relational Database |
+| HTML5 | Frontend Structure |
+| CSS3 | Styling & Responsive UI |
+| Jinja2 | Dynamic Templates |
 | Git | Version Control |
 | GitHub | Source Code Management |
 
 ---
 
-## 🗄️ Database Design
-
-The application uses **SQLite**.
-
-### Users
-
-Stores administrator login information.
+## 🏗️ System Architecture
 
 ```text
-id
-username
-password
+                    ┌─────────────────────┐
+                    │      Admin User     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    Flask Web App    │
+                    └──────────┬──────────┘
+                               │
+              ┌────────────────┼────────────────┐
+              │                │                │
+              ▼                ▼                ▼
+        ┌──────────┐    ┌────────────┐   ┌─────────────┐
+        │   Books  │    │  Students  │   │ Transactions│
+        └──────────┘    └────────────┘   └──────┬──────┘
+                                                 │
+                                                 ▼
+                                      ┌──────────────────┐
+                                      │  SQLite Database │
+                                      └──────────────────┘
+```
